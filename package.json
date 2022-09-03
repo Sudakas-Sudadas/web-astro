@@ -1,0 +1,25 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/image": "^0.3.6",
+    "@astrojs/react": "^1.1.0",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/solid-js": "^1.1.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "astro": "^1.1.1",
+    "react-dom": "^18.0.0",
+    "solid-js": "^1.4.3"
+  },
+  "dependencies": {
+    "@storyblok/js": "^1.7.2"
+  }
+}

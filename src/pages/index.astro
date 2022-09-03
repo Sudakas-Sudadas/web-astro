@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Video from "../components/Video.astro";
+import { Image } from "@astrojs/image/components";
+
+import logoRojo from "../assets/logo-rojo.png";
+---
+
+<Layout title="Inicio">
+    <main>
+        <Video>
+            <Image src={logoRojo} />
+        </Video>
+    </main>
+</Layout>
