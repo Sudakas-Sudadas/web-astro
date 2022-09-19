@@ -1,0 +1,48 @@
+---
+export interface Props {
+    story: any;
+}
+
+const { story } = Astro.props;
+
+import '../styles/rich-text.scss';
+
+import { getEditableAttributes } from '../utils/storyblok.js';
+import { renderRichText } from '@storyblok/js';
+import Triangle from './Triangle.astro';
+
+const editableAttributes = (await getEditableAttributes(story)) as {
+    'data-blok-c': string;
+    'data-blok-uid': string;
+};
+---
+
+<article
+    data-blok-c={editableAttributes['data-blok-c']}
+    data-blok-uid={editableAttributes['data-blok-uid']}
+    class:list={[{ storyblok__outline: editableAttributes }]}
+>
+    {
+        story.content.image && (
+            <img
+                src={`${story.content.image.filename}/m/1080x0`}
+                alt=''
+                class='p-4 sm:max-h-[50vh] lg:max-h-[40vh] xl:max-h-[60vh] w-full object-contain bg-mora-50'
+            />
+        )
+    }
+
+    <div class='relative py-4 md:py-12'>
+        <Triangle
+            class='absolute inset-0 w-2/3 sm:w-2/5 lg:w-1/4 xl:w-1/6 mt-4 ml-auto -z-10 text-rosa-50'
+        />
+
+        <div class='container mx-auto p-4 lg:p-12'>
+            <div
+                set:html={renderRichText(story.content.body)}
+                class='px-4 sm:px-12 py-4 border border-rosa-100 rich-text'
+            >
+            </div>
+        </div>
+    </div>
+</article>

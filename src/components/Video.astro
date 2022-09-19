@@ -5,7 +5,9 @@ import poster from '../assets/poster.png';
 const videoUri = 'https://sudakas.s3.sa-east-1.amazonaws.com/video/h264.mpd';
 ---
 
-<div class='w-full relative'>
+<div
+    class='w-full max-h-screen md:max-h-[50vh] xl:max-h-[60vh] 2xl:max-h-[80vh] relative flex justify-center items-center overflow-hidden'
+>
     <ShakaPlayer
         client:only='solid-js'
         class='w-full'
@@ -14,7 +16,7 @@ const videoUri = 'https://sudakas.s3.sa-east-1.amazonaws.com/video/h264.mpd';
     />
 
     <div
-        class='absolute z-10 inset-0 w-full h-full flex justify-center items-center'
+        class='absolute inset-0 w-full h-full flex justify-center items-center'
     >
         <slot />
     </div>

@@ -1,15 +1,63 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Video from "../components/Video.astro";
-import { Image } from "@astrojs/image/components";
+import Layout from '../layouts/Layout.astro';
+import Video from '../components/Video.astro';
 
-import logoRojo from "../assets/logo-rojo.png";
+import logoRojo from '../assets/logo-rojo.png';
+import imgAmerica from '../assets/america-blanco.png';
+import Triangle from '../components/Triangle.astro';
+import TextBlock from '../components/TextBlock.astro';
+import Bar from '../components/Bar.astro';
 ---
 
-<Layout title="Inicio">
-    <main>
-        <Video>
-            <Image src={logoRojo} />
-        </Video>
-    </main>
+<Layout title='Inicio'>
+    <Video slot='top'>
+        <img src={logoRojo} class='h-3/4 sm:h-2/3' />
+    </Video>
+
+    <div class='relative'>
+        <Triangle
+            class='absolute inset-0 w-2/3 sm:w-1/3 lg:w-1/4 xl:w-1/6 mt-4 ml-auto -z-10 text-rosa-50'
+        />
+
+        <div class='container mx-auto p-4 lg:flex'>
+            <div
+                class='mb-8 sm:px-8 lg:w-1/2 lg:flex-grow font-serif text-sm md:text-base 2xl:text-lg lg:order-last'
+            >
+                <p>Práctica de amor, resistencia y movimiento.</p>
+                <Bar />
+
+                <p>
+                    Investigamos, hacemos y compartimos DANZAS, incorporando una
+                    mirada territorial y comprensiva de las corporalidades y las
+                    prácticas desde el Sur global que habitamos.
+                </p>
+            </div>
+
+            <img
+                src={imgAmerica}
+                alt='Sudamérica con el sur arriba'
+                class='mx-auto xl:pl-32 sm:max-w-[60vw] md:max-w-[50vw] lg:w-1/2'
+            />
+        </div>
+    </div>
+
+    <TextBlock class='xl:mt-12 mb-8 xl:w-2/3 2xl:w-1/2'>
+        <p>
+            SUDAKA como reivindicar la lucha y resistencia gozosa y acuerpada,
+            comunitaria, colectiva por el buen vivir, tomando la necesidad de
+            re-pensarse desde este territorio sur. Esta resistencia activa es
+            contestataria a la cultura europea hegemónica y dominante, como
+            parte de un proceso de descolonización. La ejercemos desde el goce y
+            la celebración, tomamos lo que nos hizo margen y como cuerpes en
+            movimiento contrahegemónico lo hacemos cultura de resistencia, desde
+            el placer de estar vives, desde una colectividad, desde la práctica
+            corporal, como resignificación de las memorias vivas, dando al
+            placer y al proceso la importancia. Particularmente para nosotras
+            SUDAKA es también una práctica sororal, desde el acompañarse,
+            acuerpar las búsquedas personales hacia lo colectivo, desde la
+            práctica colectiva levantar reflexiones y procesos de
+            identificación, decolonización y despatriarcalización. Entender y
+            aprenderse desde los feminismos para cambiarlo todo.
+        </p>
+    </TextBlock>
 </Layout>

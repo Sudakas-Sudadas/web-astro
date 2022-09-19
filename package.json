@@ -1,25 +1,24 @@
 {
-  "name": "@example/basics",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "devDependencies": {
-    "@astrojs/image": "^0.3.6",
-    "@astrojs/react": "^1.1.0",
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/solid-js": "^1.1.0",
-    "@astrojs/tailwind": "^1.0.0",
-    "astro": "^1.1.1",
-    "react-dom": "^18.0.0",
-    "solid-js": "^1.4.3"
-  },
-  "dependencies": {
-    "@storyblok/js": "^1.7.2"
-  }
+    "name": "@example/basics",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem"
+    },
+    "devDependencies": {
+        "@astrojs/sitemap": "^1.0.0",
+        "@astrojs/solid-js": "^1.1.0",
+        "@astrojs/tailwind": "^1.0.1",
+        "astro": "^1.2.6",
+        "sass": "^1.54.9",
+        "solid-js": "^1.5.5"
+    },
+    "dependencies": {
+        "@storyblok/js": "^1.8.3"
+    }
 }

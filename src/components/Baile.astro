@@ -1,0 +1,26 @@
+---
+export interface Props {
+    baile: any;
+}
+
+const { baile } = Astro.props;
+
+import { getEditableAttributes } from '../utils/storyblok.js';
+
+const editableAttributes = (await getEditableAttributes(baile)) as {
+    'data-blok-c': string;
+    'data-blok-uid': string;
+};
+---
+
+<article
+    data-blok-c={editableAttributes['data-blok-c']}
+    data-blok-uid={editableAttributes['data-blok-uid']}
+    class:list={[{ storyblok__outline: editableAttributes }]}
+>
+    <a href={baile.full_slug}>
+        <h2>{baile.name}</h2>
+    </a>
+
+    <p>{baile.content.description}</p>
+</article>

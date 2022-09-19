@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Article from '../components/Article.astro';
+import { getLinks, getStory } from '../utils/storyblok.js';
+
+export async function getStaticPaths() {
+    let links = await getLinks('practicas/');
+    links = Object.values(links);
+
+    return links.map((link: any) => {
+        return {
+            params: { slug: link.slug },
+        };
+    });
+}
+
+const story = await getStory(Astro.params.slug);
+---
+
+<Layout title={story.name}>
+    <Article story={story} />
+</Layout>

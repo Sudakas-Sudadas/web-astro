@@ -1,0 +1,135 @@
+---
+import Bar from '../components/Bar.astro';
+import TextBlock from '../components/TextBlock.astro';
+import Triangle from '../components/Triangle.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title='Quiénes Somos'>
+    <h2
+        class='mx-8 lg:ml-32 lg:w-1/2 2xl:w-2/5 border-b border-mora-100 text-right text-lg'
+    >
+        Sudakas Sudadas
+    </h2>
+
+    <div class='relative mb-8 lg:mb-12 overflow-hidden'>
+        <Triangle
+            class='absolute inset-0 w-[120vw] sm:w-full md:w-3/4 lg:w-3/5 2xl:w-1/2 -mt-28 sm:-mt-40 md:-mt-48 lg:-mt-80 2xl:-mt-96 mr-auto -z-10 text-rosa-50 -scale-x-100'
+        />
+
+        <div
+            class='lg:ml-32 py-4 px-8 sm:w-3/4 md:w-2/3 lg:w-1/2 2xl:w-2/5 text-sm lg:text-base'
+        >
+            <p>
+                Somos tres amigas y trabajadoras de las danzas: Andrea, Camila y
+                Diana, que hemos desarrollado esta práctica y proyecto para
+                poder encontrarnos en el movimiento, las reflexiones, el trabajo
+                colectivo y sensible a través de las danzas.
+            </p>
+
+            <p>
+                Porque la cuerpa es territorio y gozar es político.<br />
+                Este proyecto pretende investigar dentro del ámbito de las danzas
+                y las metodologías de enseñanza-aprendizaje, de forma amorosa y práctica,
+                haciendo teoría al mismo tiempo.
+            </p>
+
+            <p>
+                Reflexionar-nos, encontrándonos desde el baile, acogiendo lxs
+                cuerpxs en sus actuales contextos, con la intención de potenciar
+                las particularidades re-apropiándonos de un común gozoso en
+                diversidad, atendiendo a la necesidad que tenemos de volver al
+                Sur.<br />
+                Nos gusta bailar.<br />
+                Nos gustan las danzas.<br />
+                Nos gusta la cumbia nena, el reggaetón, el axé, el twerk, el house
+                y las sensibilidades de las danzas contemporáneas, entre tanto que
+                nos gusta hacer y probar con nuestras movilidades y entretejer para
+                disfrutar del cuerpx y el movimiento.<br />
+                Que se retome la potencia erótica de las danzas,<br />
+                que nos encontremos en el movimiento deseantes y gozantes,<br />
+                que se suelten las carnes y se gocen apropiadas las diversidades
+                de movilidades.
+            </p>
+
+            <p>
+                Desde noviembre de 2019 que con la práctica Bailable
+                Contemporánea Sudaka empezamos este proyecto, la cual se ha
+                desarrollado en una serie de encuentros y espacios, tanto
+                presenciales como online.
+            </p>
+
+            <p>
+                Hemos pasado por residencias creativas en Anandamapu y ahora en
+                La Mixta, en el proceso de creación de danzas para compartir.
+            </p>
+        </div>
+    </div>
+
+    <div class='container mx-auto p-4 lg:px-8'>
+        <div class='md:grid grid-cols-[1fr_2fr] lg justify-end items-center'>
+            <h3 class='text-right'>Andrea Amaro Uribe</h3>
+
+            <TextBlock class='mb-8 xl:w-3/4'>
+                <p>
+                    Trabajadora de la danza, docente y artista escénica
+                    independiente, vibrante del Sur de América del Sur.
+                    Vinculada a la enseñanza-aprendizaje desde los afectos,
+                    atraída por la práctica y reflexión de entrenamientos en
+                    torno a la danza contemporánea y social como puente para el
+                    despertar mental, del alma y el corazón desde una
+                    corporeidad situada y placentera.
+                </p>
+            </TextBlock>
+
+            <h3 class='text-right'>Camila Soto</h3>
+
+            <TextBlock class='mb-8 xl:w-3/4'>
+                <p>
+                    Trabajadora independiente de las danzas y Dj. Me interesa
+                    abordar cada quehacer desde el deseo como impulsor y el
+                    placer como transformador. Bailo desde que nací, hace 33
+                    años (al 2022) y me dedico a las artes escénicas como
+                    estudiante, intérprete-creadora docente y productora en
+                    diversos espacios y con diversxs artistas. Desde 2019 soy
+                    parte de la Fundación CAI, con quienes realizamos talleres
+                    para las comunidades de escuelas para personas con TEA y
+                    necesidades especiales. Interesada por las expresiones de
+                    goce popular, durante el 2021 comencé a ser Dj.
+                </p>
+            </TextBlock>
+
+            <h3 class='text-right'>Diana Carvajal Guevara</h3>
+
+            <TextBlock class='mb-8 xl:w-3/4'>
+                <p>
+                    Trabajadora de las danzas y artista escénica. Me movilizo
+                    sensiblemente entre la danza contemporánea, el freestyle
+                    twerk y el teatro. Me gusta investigar colaborativamente y
+                    de forma interdisciplinar, para la creación y la formación
+                    situada en el contexto y territorio, reivindicando las
+                    danzas, cuerpas e identidades gozosas del sur global que
+                    habitamos. Es parte de
+                    <a
+                        href='https://www.instagram.com/antimetodo'
+                        class='font-bold text-rosa-300'>@antimetodo</a
+                    >,
+                    <a
+                        href='https://www.instagram.com/co_inspirantes'
+                        class='font-bold text-rosa-300'>@co_inspirantes</a
+                    >,
+                    <a
+                        href='https://www.instagram.com/p.0.t.0.s'
+                        class='font-bold text-rosa-300'>@p.0.t.0.s</a
+                    > plataforma freestyle Twerk.
+                </p>
+            </TextBlock>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    p {
+        padding-bottom: 0.5rem;
+    }
+</style>
