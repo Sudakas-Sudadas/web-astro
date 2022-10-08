@@ -26,13 +26,13 @@ const editableAttributes = (await getEditableAttributes(story)) as {
         story.content.image && (
             <img
                 src={`${story.content.image.filename}/m/1080x0`}
-                alt=''
+                alt={story.content.image.alt || story.content.image.name}
                 class='p-4 sm:max-h-[50vh] lg:max-h-[40vh] xl:max-h-[60vh] w-full object-contain bg-mora-50'
             />
         )
     }
 
-    <div class='relative py-4 md:py-12'>
+    <div class='relative py-4 md:py-12 overflow-hidden'>
         <Triangle
             class='absolute inset-0 w-2/3 sm:w-2/5 lg:w-1/4 xl:w-1/6 mt-4 ml-auto -z-10 text-rosa-50'
         />

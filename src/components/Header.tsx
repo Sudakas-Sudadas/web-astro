@@ -30,11 +30,11 @@ const Header: Component<{}> = (props) => {
                 <span>Cerrar</span>
             </button>
 
-            <nav class="py-8 xl:py-4 uppercase xl:bg-black text-black xl:text-white">
+            <nav class="py-8 xl:py-2 uppercase xl:bg-black text-black xl:text-white">
                 <ul class="container mx-auto px-4 xl:w-3/4 2xl:w-3/5 space-y-6 xl:space-y-0 xl:flex items-center justify-between">
                     <li>
                         <a href="/">
-                            <img src={logoPoto} alt="Sudakas Sudadas" class="ml-auto h-10" />
+                            <img src={logoPoto} alt="Imagotipo Sudakas Sudadas" class="ml-auto h-16" />
                         </a>
                     </li>
                     <li>
