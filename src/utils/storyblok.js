@@ -18,9 +18,8 @@ const { storyblokApi } = storyblokInit({
     use: [apiPlugin],
 });
 
-export async function getLinks(folder) {
+export async function getLinks(folder = '') {
     const { data } = await storyblokApi.get('cdn/links', {
-        version: 'draft',
         starts_with: folder,
     });
 
@@ -30,18 +29,15 @@ export async function getLinks(folder) {
 }
 
 export async function getStory(slug) {
-    const { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
-        version: 'draft',
-    });
+    const { data } = await storyblokApi.get(`cdn/stories/${slug}`);
 
     const story = data ? data.story : null;
 
     return story;
 }
 
-export async function getStories(folder) {
+export async function getStories(folder = '') {
     const { data } = await storyblokApi.get('cdn/stories', {
-        version: 'draft',
         starts_with: folder,
         sort_by: 'created_at:asc'
     });

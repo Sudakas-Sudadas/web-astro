@@ -4,7 +4,7 @@ import Article from '../components/Article.astro';
 import { getLinks, getStory } from '../utils/storyblok.js';
 
 export async function getStaticPaths() {
-    let links = await getLinks('practicas/');
+    let links = await getLinks();
     links = Object.values(links);
 
     return links.map((link: any) => {
