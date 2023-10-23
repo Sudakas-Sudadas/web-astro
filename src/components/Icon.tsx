@@ -1,6 +1,5 @@
-import { Component, mergeProps } from "solid-js";
-
-import iconUrl from '../assets/feather-sprite.svg';
+import type { Component } from "solid-js";
+import { mergeProps } from "solid-js";
 
 const Icon: Component<{ name: string, size?: number, color?: string, class?: string }> = (props) => {
     props = mergeProps({
@@ -18,7 +17,7 @@ const Icon: Component<{ name: string, size?: number, color?: string, class?: str
         stroke-linejoin="round"
         class={props.class}
     >
-        <use href={`${iconUrl}#${props.name}`} />
+        <use href={`/feather-sprite.svg#${props.name}`} />
     </svg>;
 };
 

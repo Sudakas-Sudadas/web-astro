@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Video from '../components/Video.astro';
 
@@ -11,7 +12,7 @@ import Bar from '../components/Bar.astro';
 
 <Layout title='Inicio'>
     <Video slot='top'>
-        <img src={logoRojo} alt='Logo Sudakas Sudadas' class='h-3/4 sm:h-2/3' />
+        <Image src={logoRojo} alt='Logo Sudakas Sudadas' class='w-auto h-3/4 sm:h-2/3' />
     </Video>
 
     <div class='relative'>
@@ -33,7 +34,7 @@ import Bar from '../components/Bar.astro';
                 </p>
             </div>
 
-            <img
+            <Image
                 src={imgAmerica}
                 alt='Sudamérica con el sur arriba'
                 class='mx-auto xl:pl-32 sm:max-w-[60vw] md:max-w-[50vw] lg:w-1/2'

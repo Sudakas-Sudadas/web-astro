@@ -11,14 +11,15 @@
         "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem"
     },
     "devDependencies": {
-        "@astrojs/sitemap": "^1.0.0",
-        "@astrojs/solid-js": "^1.1.1",
-        "@astrojs/tailwind": "^1.0.1",
-        "astro": "^1.4.6",
-        "sass": "^1.55.0",
-        "solid-js": "^1.5.7"
+        "@astrojs/sitemap": "^3.0.2",
+        "@astrojs/solid-js": "^3.0.2",
+        "@astrojs/tailwind": "^5.0.2",
+        "astro": "^3.3.2",
+        "sass": "^1.69.4",
+        "sitemap@latest": "link:astro/sitemap@latest",
+        "solid-js": "^1.8.3"
     },
     "dependencies": {
-        "@storyblok/js": "^1.8.5"
+        "@storyblok/js": "^1.8.6"
     }
 }
